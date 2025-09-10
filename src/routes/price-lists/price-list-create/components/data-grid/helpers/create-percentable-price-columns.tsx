@@ -1,12 +1,10 @@
 // components/data-grid/helpers/create-percentable-price-columns.tsx
 import { ColumnDef } from "@tanstack/react-table";
-import type { HttpTypes } from "@medusajs/types";
 import { FieldValues, Path } from "react-hook-form";
 import PriceCellWithMode from "../price-cell-with-mode";
 
 type MakeColsArgs<TRow, TForm extends FieldValues> = {
   currencies: string[];
-  regions: HttpTypes.AdminRegion[];
   isReadOnly: (ctx: any) => boolean;
   getBaseAmount: (
     row: TRow,
@@ -19,7 +17,6 @@ type MakeColsArgs<TRow, TForm extends FieldValues> = {
 
 export function createPercentablePriceColumns<TRow, TForm extends FieldValues>({
   currencies,
-  regions,
   isReadOnly,
   getBaseAmount,
   getCurrencySymbol = (code) => code,
@@ -44,16 +41,7 @@ export function createPercentablePriceColumns<TRow, TForm extends FieldValues>({
     meta: { kind: "currency", code },
     cell: (ctx) => {
       if (isReadOnly(ctx)) {
-        const paths = makePaths(ctx.row.original, "currency", code);
-        const form = (ctx.table.options.meta as any)?.form as
-          | { getValues: (p: Path<TForm>) => any }
-          | undefined;
-        const amount = form?.getValues?.(paths.amount);
-        return (
-          <div className="px-2 text-right">
-            {getCurrencySymbol(code)} {amount ?? ""}
-          </div>
-        );
+        return <div />;
       }
 
       return (
@@ -67,29 +55,5 @@ export function createPercentablePriceColumns<TRow, TForm extends FieldValues>({
     },
   }));
 
-  const regionCols: ColumnDef<TRow>[] = regions.map((r) => ({
-    id: `region_prices.${r.id}`,
-    header: r.name,
-    meta: { kind: "region", id: r.id },
-    cell: (ctx) => {
-      if (isReadOnly(ctx)) {
-        const paths = makePaths(ctx.row.original, "region", r.id!);
-        const form = (ctx.table.options.meta as any)?.form as
-          | { getValues: (p: Path<TForm>) => any }
-          | undefined;
-        const amount = form?.getValues?.(paths.amount);
-        return <div className="px-2 text-right">{amount ?? ""}</div>;
-      }
-
-      return (
-        <PriceCellWithMode<TForm, TRow>
-          context={ctx}
-          getBaseAmount={(row) => getBaseAmount(row as TRow, "region", r.id!)}
-          getPaths={(ictx) => makePaths(ictx.row.original, "region", r.id!)}
-        />
-      );
-    },
-  }));
-
-  return [...currencyCols, ...regionCols];
+  return [...currencyCols];
 }

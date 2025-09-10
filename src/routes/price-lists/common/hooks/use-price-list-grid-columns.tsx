@@ -63,12 +63,11 @@ export const usePriceListGridColumns = ({
         PricingCreateSchemaType
       >({
         currencies: currencies.map((c) => c.currency_code),
-        regions,
         isReadOnly: (context) => {
           const entity = context.row.original;
           return isProductRow(entity);
         },
-        getBaseAmount: (row, kind, key) => {
+        getBaseAmount: (row) => {
           return (row as any)?.base_price ?? 0;
         },
         getBasePath: (row, kind, key) => {
@@ -76,14 +75,22 @@ export const usePriceListGridColumns = ({
           const productId = isProductRow(entity)
             ? entity.id
             : entity.product_id;
-          const variantId = isProductRow(entity) ? "" : entity.id;
+          let variantId: string | undefined;
+
+          if (!isProductRow(entity)) {
+            variantId = entity.id;
+          }
+
+          if (isProductRow(entity)) {
+            return `products.${productId}.variants`;
+          }
 
           if (kind === "currency") {
             return `products.${productId}.variants.${variantId}.currency_prices.${key}`;
           }
           return `products.${productId}.variants.${variantId}.region_prices.${key}`;
         },
-        getCurrencySymbol: (code) => (code === "EUR" ? "€" : ""),
+        getCurrencySymbol: (code) => code,
       }),
     ];
   }, [t, currencies, regions, pricePreferences]);

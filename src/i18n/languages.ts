@@ -18,9 +18,10 @@ import {
   faIR,
   cs,
   ru,
-  el
-} from "date-fns/locale"
-import { Language } from "./types"
+  el,
+  vi,
+} from "date-fns/locale";
+import { Language } from "./types";
 
 export const languages: Language[] = [
   {
@@ -143,4 +144,10 @@ export const languages: Language[] = [
     ltr: true,
     date_locale: ru,
   },
-]
+  {
+    code: "vi",
+    display_name: "VietNam",
+    ltr: true,
+    date_locale: vi,
+  },
+];

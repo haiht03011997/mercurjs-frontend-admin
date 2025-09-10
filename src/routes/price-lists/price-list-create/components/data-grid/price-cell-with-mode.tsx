@@ -28,7 +28,6 @@ const PriceCellWithMode = <TForm extends FieldValues, TRow>({
 }: PriceCellProps<TForm, TRow>) => {
   const { watch, setValue } = useFormContext<TForm>();
   const paths = useMemo(() => getPaths(context), [context, getPaths]);
-  console.log("currencySymbol", currencySymbol);
 
   const set = <P extends Path<TForm>>(name: P, value: PathValue<TForm, P>) =>
     setValue(name, value, { shouldDirty: true });

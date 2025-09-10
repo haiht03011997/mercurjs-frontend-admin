@@ -1,0 +1,685 @@
+{
+  "$schema": "./$schema.json",
+  "general": {
+    "ascending": "Tăng dần",
+    "descending": "Giảm dần",
+    "add": "Thêm",
+    "start": "Bắt đầu",
+    "end": "Kết thúc",
+    "open": "Mở",
+    "close": "Đóng",
+    "apply": "Áp dụng",
+    "range": "Khoảng",
+    "search": "Tìm kiếm",
+    "of": "trên",
+    "results": "kết quả",
+    "pages": "trang",
+    "next": "Tiếp",
+    "prev": "Trước",
+    "is": "là",
+    "timeline": "Dòng thời gian",
+    "success": "Thành công",
+    "warning": "Cảnh báo",
+    "tip": "Mẹo",
+    "error": "Lỗi",
+    "select": "Chọn",
+    "selected": "Đã chọn",
+    "enabled": "Bật",
+    "disabled": "Tắt",
+    "expired": "Hết hạn",
+    "active": "Đang hoạt động",
+    "revoked": "Đã thu hồi",
+    "new": "Mới",
+    "modified": "Đã sửa",
+    "added": "Đã thêm",
+    "removed": "Đã xoá",
+    "admin": "Quản trị",
+    "store": "Cửa hàng",
+    "details": "Chi tiết",
+    "items_one": "{{count}} mục",
+    "items_other": "{{count}} mục",
+    "countSelected": "{{count}} đã chọn",
+    "countOfTotalSelected": "{{count}} trên {{total}} đã chọn",
+    "plusCount": "+ {{count}}",
+    "plusCountMore": "+ {{count}} nữa",
+    "areYouSure": "Bạn có chắc không?",
+    "noRecordsFound": "Không tìm thấy bản ghi",
+    "typeToConfirm": "Vui lòng nhập {val} để xác nhận:",
+    "noResultsTitle": "Không có kết quả",
+    "noResultsMessage": "Hãy thay đổi bộ lọc hoặc cụm từ tìm kiếm",
+    "noSearchResults": "Không có kết quả tìm kiếm",
+    "noSearchResultsFor": "Không có kết quả cho <0>'{{query}}'</0>",
+    "noRecordsTitle": "Không có bản ghi",
+    "noRecordsMessage": "Không có dữ liệu để hiển thị",
+    "unsavedChangesTitle": "Rời biểu mẫu này?",
+    "unsavedChangesDescription": "Bạn có thay đổi chưa lưu; rời trang sẽ mất các thay đổi.",
+    "includesTaxTooltip": "Giá trong cột này đã bao gồm thuế.",
+    "excludesTaxTooltip": "Giá trong cột này chưa bao gồm thuế.",
+    "noMoreData": "Không còn dữ liệu"
+  },
+  "json": {
+    "header": "JSON",
+    "numberOfKeys_one": "{{count}} khoá",
+    "numberOfKeys_other": "{{count}} khoá",
+    "drawer": {
+      "header_one": "JSON <0>· {{count}} khoá</0>",
+      "header_other": "JSON <0>· {{count}} khoá</0>",
+      "description": "Xem dữ liệu JSON của đối tượng này."
+    }
+  },
+  "metadata": {
+    "header": "Siêu dữ liệu",
+    "numberOfKeys_one": "{{count}} khoá",
+    "numberOfKeys_other": "{{count}} khoá",
+    "edit": {
+      "header": "Sửa Siêu dữ liệu",
+      "description": "Chỉnh sửa siêu dữ liệu cho đối tượng này.",
+      "successToast": "Đã cập nhật siêu dữ liệu thành công.",
+      "actions": {
+        "insertRowAbove": "Chèn hàng phía trên",
+        "insertRowBelow": "Chèn hàng phía dưới",
+        "deleteRow": "Xoá hàng"
+      },
+      "labels": {
+        "key": "Khoá",
+        "value": "Giá trị"
+      },
+      "complexRow": {
+        "label": "Một số hàng bị vô hiệu hoá",
+        "description": "Đối tượng chứa dữ liệu không nguyên thuỷ (mảng/đối tượng) không thể chỉnh ở đây. Hãy dùng API để sửa các hàng bị vô hiệu.",
+        "tooltip": "Hàng này bị vô hiệu vì chứa dữ liệu không nguyên thuỷ."
+      }
+    }
+  },
+  "validation": {
+    "mustBeInt": "Giá trị phải là số nguyên.",
+    "mustBePositive": "Giá trị phải là số dương."
+  },
+  "actions": {
+    "save": "Lưu",
+    "saveAsDraft": "Lưu nháp",
+    "copy": "Sao chép",
+    "copied": "Đã sao chép",
+    "duplicate": "Nhân bản",
+    "publish": "Xuất bản",
+    "create": "Tạo",
+    "delete": "Xoá",
+    "remove": "Gỡ",
+    "revoke": "Thu hồi",
+    "cancel": "Huỷ",
+    "forceConfirm": "Xác nhận cưỡng bức",
+    "continueEdit": "Tiếp tục sửa",
+    "enable": "Bật",
+    "disable": "Tắt",
+    "undo": "Hoàn tác",
+    "complete": "Hoàn tất",
+    "viewDetails": "Xem chi tiết",
+    "back": "Quay lại",
+    "close": "Đóng",
+    "showMore": "Xem thêm",
+    "continue": "Tiếp tục",
+    "continueWithEmail": "Tiếp tục với Email",
+    "idCopiedToClipboard": "Đã sao chép ID vào clipboard",
+    "addReason": "Thêm lý do",
+    "addNote": "Thêm ghi chú",
+    "reset": "Đặt lại",
+    "confirm": "Xác nhận",
+    "edit": "Sửa",
+    "addItems": "Thêm mặt hàng",
+    "download": "Tải xuống",
+    "clear": "Xoá",
+    "clearAll": "Xoá tất cả",
+    "apply": "Áp dụng",
+    "add": "Thêm",
+    "select": "Chọn",
+    "browse": "Duyệt",
+    "logout": "Đăng xuất",
+    "hide": "Ẩn",
+    "export": "Xuất",
+    "import": "Nhập",
+    "cannotUndo": "Hành động này không thể hoàn tác"
+  },
+  "operators": {
+    "in": "Trong"
+  },
+  "app": {
+    "search": {
+      "label": "Tìm kiếm",
+      "title": "Tìm kiếm",
+      "description": "Tìm trên toàn bộ cửa hàng: đơn hàng, sản phẩm, khách hàng,…",
+      "allAreas": "Tất cả khu vực",
+      "navigation": "Điều hướng",
+      "openResult": "Mở kết quả",
+      "showMore": "Xem thêm",
+      "placeholder": "Đi đến hoặc tìm bất cứ thứ gì...",
+      "noResultsTitle": "Không tìm thấy",
+      "noResultsMessage": "Không có gì khớp với tìm kiếm của bạn.",
+      "emptySearchTitle": "Nhập để tìm",
+      "emptySearchMessage": "Nhập từ khoá để bắt đầu.",
+      "loadMore": "Tải thêm {{count}}",
+      "groups": {
+        "all": "Tất cả khu vực",
+        "customer": "Khách hàng",
+        "customerGroup": "Nhóm khách hàng",
+        "product": "Sản phẩm",
+        "productVariant": "Biến thể sản phẩm",
+        "inventory": "Tồn kho",
+        "reservation": "Đặt giữ",
+        "category": "Danh mục",
+        "collection": "Bộ sưu tập",
+        "order": "Đơn hàng",
+        "promotion": "Khuyến mãi",
+        "campaign": "Chiến dịch",
+        "priceList": "Bảng giá",
+        "user": "Người dùng",
+        "region": "Khu vực",
+        "taxRegion": "Vùng thuế",
+        "returnReason": "Lý do trả hàng",
+        "salesChannel": "Kênh bán hàng",
+        "productType": "Loại sản phẩm",
+        "productTag": "Thẻ sản phẩm",
+        "location": "Địa điểm",
+        "shippingProfile": "Hồ sơ vận chuyển",
+        "publishableApiKey": "Khoá API công khai",
+        "secretApiKey": "Khoá API bí mật",
+        "command": "Lệnh",
+        "navigation": "Điều hướng"
+      }
+    },
+    "keyboardShortcuts": {
+      "pageShortcut": "Nhảy đến",
+      "settingShortcut": "Cài đặt",
+      "commandShortcut": "Lệnh",
+      "then": "rồi",
+      "navigation": {
+        "goToOrders": "Đơn hàng",
+        "goToProducts": "Sản phẩm",
+        "goToCollections": "Bộ sưu tập",
+        "goToCategories": "Danh mục",
+        "goToCustomers": "Khách hàng",
+        "goToCustomerGroups": "Nhóm khách hàng",
+        "goToInventory": "Tồn kho",
+        "goToReservations": "Đặt giữ",
+        "goToPriceLists": "Bảng giá",
+        "goToPromotions": "Khuyến mãi",
+        "goToCampaigns": "Chiến dịch"
+      },
+      "settings": {
+        "goToSettings": "Cài đặt",
+        "goToStore": "Cửa hàng",
+        "goToUsers": "Người dùng",
+        "goToRegions": "Khu vực",
+        "goToTaxRegions": "Vùng thuế",
+        "goToSalesChannels": "Kênh bán hàng",
+        "goToProductTypes": "Loại sản phẩm",
+        "goToLocations": "Địa điểm",
+        "goToPublishableApiKeys": "Khoá API công khai",
+        "goToSecretApiKeys": "Khoá API bí mật",
+        "goToWorkflows": "Quy trình",
+        "goToProfile": "Hồ sơ",
+        "goToReturnReasons": "Lý do trả hàng"
+      }
+    },
+    "menus": {
+      "user": {
+        "documentation": "Tài liệu",
+        "changelog": "Nhật ký thay đổi",
+        "shortcuts": "Phím tắt",
+        "profileSettings": "Cài đặt hồ sơ",
+        "theme": {
+          "label": "Giao diện",
+          "dark": "Tối",
+          "light": "Sáng",
+          "system": "Theo hệ thống"
+        }
+      },
+      "store": {
+        "label": "Cửa hàng",
+        "storeSettings": "Cài đặt cửa hàng"
+      },
+      "actions": {
+        "logout": "Đăng xuất"
+      }
+    },
+    "nav": {
+      "accessibility": {
+        "title": "Điều hướng",
+        "description": "Menu điều hướng cho bảng điều khiển."
+      },
+      "common": {
+        "extensions": "Tiện ích mở rộng"
+      },
+      "main": {
+        "store": "Cửa hàng",
+        "storeSettings": "Cài đặt cửa hàng"
+      },
+      "settings": {
+        "header": "Cài đặt",
+        "general": "Chung",
+        "developer": "Nhà phát triển",
+        "myAccount": "Tài khoản của tôi"
+      }
+    }
+  },
+  "dataGrid": {
+    "columns": {
+      "view": "Xem",
+      "resetToDefault": "Khôi phục mặc định",
+      "disabled": "Không thể thay đổi cột hiển thị."
+    },
+    "shortcuts": {
+      "label": "Phím tắt",
+      "commands": {
+        "undo": "Hoàn tác",
+        "redo": "Làm lại",
+        "copy": "Sao chép",
+        "paste": "Dán",
+        "edit": "Sửa",
+        "delete": "Xoá",
+        "clear": "Xoá",
+        "moveUp": "Di chuyển lên",
+        "moveDown": "Di chuyển xuống",
+        "moveLeft": "Di chuyển trái",
+        "moveRight": "Di chuyển phải",
+        "moveTop": "Lên đầu",
+        "moveBottom": "Xuống cuối",
+        "selectDown": "Chọn xuống",
+        "selectUp": "Chọn lên",
+        "selectColumnDown": "Chọn cột xuống",
+        "selectColumnUp": "Chọn cột lên",
+        "focusToolbar": "Focus thanh công cụ",
+        "focusCancel": "Focus nút huỷ"
+      }
+    },
+    "errors": {
+      "fixError": "Sửa lỗi",
+      "count_one": "{{count}} lỗi",
+      "count_other": "{{count}} lỗi"
+    }
+  },
+  "filters": {
+    "sortLabel": "Sắp xếp",
+    "filterLabel": "Bộ lọc",
+    "searchLabel": "Tìm kiếm",
+    "date": {
+      "today": "Hôm nay",
+      "lastSevenDays": "7 ngày qua",
+      "lastThirtyDays": "30 ngày qua",
+      "lastNinetyDays": "90 ngày qua",
+      "lastTwelveMonths": "12 tháng qua",
+      "custom": "Tùy chỉnh",
+      "from": "Từ",
+      "to": "Đến",
+      "starting": "Bắt đầu",
+      "ending": "Kết thúc"
+    },
+    "compare": {
+      "lessThan": "Nhỏ hơn",
+      "greaterThan": "Lớn hơn",
+      "exact": "Chính xác",
+      "range": "Khoảng",
+      "lessThanLabel": "nhỏ hơn {{value}}",
+      "greaterThanLabel": "lớn hơn {{value}}",
+      "andLabel": "và"
+    },
+    "sorting": {
+      "alphabeticallyAsc": "A đến Z",
+      "alphabeticallyDesc": "Z đến A",
+      "dateAsc": "Mới nhất trước",
+      "dateDesc": "Cũ nhất trước"
+    },
+    "radio": {
+      "yes": "Có",
+      "no": "Không",
+      "true": "Đúng",
+      "false": "Sai"
+    },
+    "addFilter": "Thêm bộ lọc"
+  },
+  "errorBoundary": {
+    "badRequestTitle": "400 - Yêu cầu không hợp lệ",
+    "badRequestMessage": "Máy chủ không hiểu được yêu cầu do cú pháp không đúng.",
+    "notFoundTitle": "404 - Không có trang tại địa chỉ này",
+    "notFoundMessage": "Kiểm tra URL hoặc dùng thanh tìm kiếm.",
+    "internalServerErrorTitle": "500 - Lỗi máy chủ",
+    "internalServerErrorMessage": "Có lỗi không mong muốn trên máy chủ. Vui lòng thử lại sau.",
+    "defaultTitle": "Đã xảy ra lỗi",
+    "defaultMessage": "Có lỗi không mong muốn khi hiển thị trang.",
+    "noMatchMessage": "Trang bạn tìm không tồn tại.",
+    "backToDashboard": "Về trang tổng quan"
+  },
+  "addresses": {
+    "shippingAddress": {
+      "header": "Địa chỉ giao hàng",
+      "editHeader": "Sửa địa chỉ giao hàng",
+      "editLabel": "Địa chỉ giao hàng",
+      "label": "Địa chỉ giao hàng"
+    },
+    "billingAddress": {
+      "header": "Địa chỉ thanh toán",
+      "editHeader": "Sửa địa chỉ thanh toán",
+      "editLabel": "Địa chỉ thanh toán",
+      "label": "Địa chỉ thanh toán",
+      "sameAsShipping": "Giống địa chỉ giao hàng"
+    },
+    "contactHeading": "Liên hệ",
+    "locationHeading": "Vị trí"
+  },
+  "email": {
+    "editHeader": "Sửa Email",
+    "editLabel": "Email",
+    "label": "Email"
+  },
+  "transferOwnership": {
+    "header": "Chuyển quyền sở hữu",
+    "label": "Chuyển quyền sở hữu",
+    "details": {
+      "order": "Chi tiết đơn hàng",
+      "draft": "Chi tiết nháp"
+    },
+    "currentOwner": {
+      "label": "Chủ sở hữu hiện tại",
+      "hint": "Khách hàng hiện gắn với đơn hàng."
+    },
+    "newOwner": {
+      "label": "Chủ sở hữu mới",
+      "hint": "Khách hàng sẽ nhận chuyển giao đơn hàng."
+    },
+    "validation": {
+      "mustBeDifferent": "Chủ mới phải khác chủ hiện tại.",
+      "required": "Cần chọn chủ sở hữu mới."
+    }
+  },
+  "sales_channels": {
+    "availableIn": "Khả dụng trong <0>{{x}}</0>/<1>{{y}}</1> kênh bán"
+  },
+  "products": {
+    "domain": "Sản phẩm",
+    "list": {
+      "noRecordsMessage": "Tạo sản phẩm đầu tiên để bắt đầu bán."
+    },
+    "edit": {
+      "header": "Sửa Sản phẩm",
+      "description": "Chỉnh sửa chi tiết sản phẩm.",
+      "successToast": "Đã cập nhật sản phẩm {{title}}."
+    },
+    "create": {
+      "title": "Tạo Sản phẩm",
+      "description": "Tạo sản phẩm mới.",
+      "header": "Tổng quan",
+      "tabs": {
+        "details": "Chi tiết",
+        "organize": "Tổ chức",
+        "variants": "Biến thể",
+        "inventory": "Bộ kit tồn kho"
+      },
+      "errors": {
+        "variants": "Vui lòng chọn ít nhất một biến thể.",
+        "options": "Vui lòng tạo ít nhất một tuỳ chọn.",
+        "uniqueSku": "SKU phải là duy nhất."
+      },
+      "inventory": {
+        "heading": "Bộ kit tồn kho",
+        "label": "Thêm mục tồn kho vào bộ kit của biến thể.",
+        "itemPlaceholder": "Chọn mục tồn kho",
+        "quantityPlaceholder": "Cần bao nhiêu cho bộ kit?"
+      },
+      "variants": {
+        "header": "Biến thể",
+        "subHeadingTitle": "Đúng, đây là sản phẩm có biến thể",
+        "subHeadingDescription": "Nếu bỏ chọn, chúng tôi sẽ tạo một biến thể mặc định cho bạn",
+        "optionTitle": {
+          "placeholder": "Kích cỡ"
+        },
+        "optionValues": {
+          "placeholder": "Nhỏ, Vừa, Lớn"
+        },
+        "productVariants": {
+          "label": "Biến thể sản phẩm",
+          "hint": "Thứ tự này ảnh hưởng đến sắp xếp biến thể trên storefront.",
+          "alert": "Thêm tuỳ chọn để tạo biến thể.",
+          "tip": "Các biến thể không được chọn sẽ không được tạo. Bạn luôn có thể tạo/sửa sau."
+        },
+        "productOptions": {
+          "label": "Tuỳ chọn sản phẩm",
+          "hint": "Định nghĩa tuỳ chọn như màu, kích cỡ, v.v."
+        }
+      },
+      "successToast": "Đã tạo sản phẩm {{title}}."
+    },
+    "export": {
+      "header": "Xuất danh sách sản phẩm",
+      "description": "Xuất danh sách sản phẩm ra tệp CSV.",
+      "success": {
+        "title": "Đang xử lý xuất dữ liệu",
+        "description": "Việc xuất có thể mất vài phút. Chúng tôi sẽ thông báo khi xong."
+      },
+      "filters": {
+        "title": "Bộ lọc",
+        "description": "Áp dụng bộ lọc trong bảng để điều chỉnh dữ liệu xuất"
+      },
+      "columns": {
+        "title": "Cột",
+        "description": "Tuỳ chỉnh dữ liệu xuất theo nhu cầu"
+      }
+    },
+    "import": {
+      "header": "Nhập danh sách sản phẩm",
+      "uploadLabel": "Nhập Sản phẩm",
+      "uploadHint": "Kéo thả tệp CSV hoặc bấm để tải lên",
+      "description": "Nhập sản phẩm bằng tệp CSV theo định dạng định sẵn",
+      "template": {
+        "title": "Chưa rõ định dạng?",
+        "description": "Tải mẫu bên dưới để đảm bảo đúng định dạng."
+      },
+      "upload": {
+        "title": "Tải tệp CSV",
+        "description": "Bạn có thể thêm/cập nhật sản phẩm. Để cập nhật, dùng đúng handle/ID; biến thể cần ID hiện có. Sẽ có bước xác nhận trước khi nhập.",
+        "preprocessing": "Đang tiền xử lý...",
+        "productsToCreate": "Sản phẩm sẽ được tạo",
+        "productsToUpdate": "Sản phẩm sẽ được cập nhật"
+      },
+      "success": {
+        "title": "Đang xử lý nhập dữ liệu",
+        "description": "Việc nhập có thể mất thời gian. Chúng tôi sẽ thông báo khi xong."
+      }
+    },
+    "deleteWarning": "Bạn sắp xoá sản phẩm {{title}}. Hành động này không thể hoàn tác.",
+    "variants": {
+      "header": "Biến thể",
+      "empty": {
+        "heading": "Chưa có biến thể",
+        "description": "Không có biến thể để hiển thị."
+      },
+      "filtered": {
+        "heading": "Không có kết quả",
+        "description": "Không có biến thể khớp bộ lọc hiện tại."
+      }
+    },
+    "attributes": "Thuộc tính",
+    "editAttributes": "Sửa Thuộc tính",
+    "editOptions": "Sửa Tuỳ chọn",
+    "editPrices": "Sửa giá",
+    "media": {
+      "label": "Ph phương tiện",
+      "editHint": "Thêm hình ảnh để trưng bày trên storefront.",
+      "makeThumbnail": "Đặt làm ảnh bìa",
+      "uploadImagesLabel": "Tải ảnh lên",
+      "uploadImagesHint": "Kéo thả hoặc bấm để tải ảnh.",
+      "invalidFileType": "'{{name}}' không được hỗ trợ. Hỗ trợ: {{types}}.",
+      "failedToUpload": "Tải phương tiện thất bại. Vui lòng thử lại.",
+      "deleteWarning_one": "Bạn sắp xoá {{count}} ảnh. Không thể hoàn tác.",
+      "deleteWarning_other": "Bạn sắp xoá {{count}} ảnh. Không thể hoàn tác.",
+      "deleteWarningWithThumbnail_one": "Bạn sắp xoá {{count}} ảnh (bao gồm ảnh bìa).",
+      "deleteWarningWithThumbnail_other": "Bạn sắp xoá {{count}} ảnh (bao gồm ảnh bìa).",
+      "thumbnailTooltip": "Ảnh bìa",
+      "galleryLabel": "Thư viện",
+      "downloadImageLabel": "Tải ảnh hiện tại",
+      "deleteImageLabel": "Xoá ảnh hiện tại",
+      "emptyState": {
+        "header": "Chưa có phương tiện",
+        "description": "Thêm hình ảnh để trưng bày sản phẩm.",
+        "action": "Thêm phương tiện"
+      },
+      "successToast": "Đã cập nhật phương tiện."
+    },
+    "discountableHint": "Bỏ chọn để không áp dụng khuyến mãi cho sản phẩm này.",
+    "noSalesChannels": "Không khả dụng ở kênh bán nào",
+    "variantCount_one": "{{count}} biến thể",
+    "variantCount_other": "{{count}} biến thể",
+    "deleteVariantWarning": "Bạn sắp xoá biến thể {{title}}. Không thể hoàn tác.",
+    "productStatus": {
+      "draft": "Nháp",
+      "published": "Đã xuất bản",
+      "proposed": "Đề xuất",
+      "rejected": "Từ chối"
+    },
+    "fields": {
+      "title": {
+        "label": "Tiêu đề",
+        "hint": "Tiêu đề ngắn, rõ ràng.<0/>Độ dài đề xuất: 50–60 ký tự."
+      },
+      "subtitle": {
+        "label": "Phụ đề"
+      },
+      "handle": {
+        "label": "Handle",
+        "tooltip": "Handle dùng để tham chiếu sản phẩm trên storefront. Nếu bỏ trống sẽ tự tạo từ tiêu đề."
+      },
+      "description": {
+        "label": "Mô tả",
+        "hint": "Mô tả ngắn gọn, rõ ràng.<0/>Độ dài đề xuất: 120–160 ký tự."
+      },
+      "discountable": {
+        "label": "Cho phép khuyến mãi",
+        "hint": "Bỏ chọn để không áp dụng khuyến mãi"
+      },
+      "shipping_profile": {
+        "label": "Hồ sơ vận chuyển",
+        "hint": "Kết nối sản phẩm với hồ sơ vận chuyển"
+      },
+      "type": {
+        "label": "Loại"
+      },
+      "collection": {
+        "label": "Bộ sưu tập"
+      },
+      "categories": {
+        "label": "Danh mục"
+      },
+      "tags": {
+        "label": "Thẻ"
+      },
+      "sales_channels": {
+        "label": "Kênh bán hàng",
+        "hint": "Nếu để trống, sản phẩm chỉ có ở kênh mặc định."
+      },
+      "countryOrigin": {
+        "label": "Xuất xứ"
+      },
+      "material": {
+        "label": "Chất liệu"
+      },
+      "width": {
+        "label": "Rộng"
+      },
+      "length": {
+        "label": "Dài"
+      },
+      "height": {
+        "label": "Cao"
+      },
+      "weight": {
+        "label": "Nặng"
+      },
+      "options": {
+        "label": "Tuỳ chọn sản phẩm",
+        "hint": "Dùng để định nghĩa màu sắc, kích cỡ, v.v.",
+        "add": "Thêm tuỳ chọn",
+        "optionTitle": "Tên tuỳ chọn",
+        "optionTitlePlaceholder": "Màu sắc",
+        "variations": "Biến thể (phân tách bằng dấu phẩy)",
+        "variantionsPlaceholder": "Đỏ, Xanh, Lục"
+      },
+      "variants": {
+        "label": "Biến thể sản phẩm",
+        "hint": "Biến thể không chọn sẽ không được tạo; thứ tự ảnh hưởng sắp xếp ở frontend."
+      },
+      "mid_code": {
+        "label": "Mã Mid"
+      },
+      "hs_code": {
+        "label": "Mã HS"
+      }
+    }
+  },
+  "priceLists": {
+    "domain": "Bảng giá",
+    "subtitle": "Tạo giá khuyến mãi hoặc ghi đè giá theo điều kiện.",
+    "delete": {
+      "confirmation": "Bạn sắp xoá bảng giá {{title}}. Không thể hoàn tác.",
+      "successToast": "Đã xoá bảng giá {{title}}."
+    },
+    "create": {
+      "header": "Tạo Bảng giá",
+      "subheader": "Tạo bảng giá mới để quản lý giá sản phẩm.",
+      "tabs": {
+        "details": "Chi tiết",
+        "products": "Sản phẩm",
+        "prices": "Giá"
+      },
+      "successToast": "Đã tạo bảng giá {{title}}.",
+      "products": {
+        "list": {
+          "noRecordsMessage": "Hãy tạo sản phẩm trước."
+        }
+      }
+    },
+    "edit": {
+      "header": "Sửa Bảng giá",
+      "successToast": "Đã cập nhật bảng giá {{title}}."
+    },
+    "configuration": {
+      "header": "Cấu hình",
+      "edit": {
+        "header": "Sửa Cấu hình Bảng giá",
+        "description": "Chỉnh sửa cấu hình bảng giá.",
+        "successToast": "Đã cập nhật cấu hình bảng giá."
+      }
+    },
+    "products": {
+      "header": "Sản phẩm",
+      "actions": {
+        "addProducts": "Thêm sản phẩm",
+        "editPrices": "Sửa giá"
+      },
+      "delete": {
+        "confirmation_one": "Bạn sắp xoá giá của {{count}} sản phẩm trong bảng giá. Không thể hoàn tác.",
+        "confirmation_other": "Bạn sắp xoá giá của {{count}} sản phẩm trong bảng giá. Không thể hoàn tác.",
+        "successToast_one": "Đã xoá giá của {{count}} sản phẩm.",
+        "successToast_other": "Đã xoá giá của {{count}} sản phẩm."
+      },
+      "add": {
+        "successToast": "Đã thêm giá vào bảng giá."
+      },
+      "edit": {
+        "successToast": "Đã cập nhật giá."
+      }
+    },
+    "fields": {
+      "priceOverrides": {
+        "label": "Ghi đè giá",
+        "header": "Ghi đè giá"
+      },
+      "status": {
+        "label": "Trạng thái",
+        "options": {
+          "active": "Đang hoạt động",
+          "draft": "Nháp",
+          "expired": "Hết hạn",
+          "scheduled": "Đã lên lịch"
+        }
+      }
+    }
+  }
+}
