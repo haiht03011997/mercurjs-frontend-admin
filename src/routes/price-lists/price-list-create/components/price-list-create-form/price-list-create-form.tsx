@@ -84,35 +84,36 @@ export const PriceListCreateForm = ({
     const rulesPayload = rules?.customer_group_id?.length
       ? { "customer.groups.id": rules.customer_group_id.map((cg) => cg.id) }
       : undefined;
+    console.log("products", products);
 
     const prices = exctractPricesFromProducts(products, regions);
     console.log(prices);
 
-    // await mutateAsync(
-    //   {
-    //     title: data.title,
-    //     type: data.type as PriceListType,
-    //     status: data.status as PriceListStatus,
-    //     description: data.description,
-    //     starts_at: data.starts_at ? data.starts_at.toISOString() : null,
-    //     ends_at: data.ends_at ? data.ends_at.toISOString() : null,
-    //     rules: rulesPayload,
-    //     prices,
-    //   },
-    //   {
-    //     onSuccess: ({ price_list }) => {
-    //       toast.success(
-    //         t("priceLists.create.successToast", {
-    //           title: price_list.title,
-    //         })
-    //       )
-    //       handleSuccess(`../${price_list.id}`)
-    //     },
-    //     onError: (error) => {
-    //       toast.error(error.message)
-    //     },
-    //   }
-    // )
+    await mutateAsync(
+      {
+        title: data.title,
+        type: data.type as PriceListType,
+        status: data.status as PriceListStatus,
+        description: data.description,
+        starts_at: data.starts_at ? data.starts_at.toISOString() : null,
+        ends_at: data.ends_at ? data.ends_at.toISOString() : null,
+        rules: rulesPayload,
+        prices,
+      },
+      {
+        onSuccess: ({ price_list }) => {
+          toast.success(
+            t("priceLists.create.successToast", {
+              title: price_list.title,
+            })
+          );
+          handleSuccess(`../${price_list.id}`);
+        },
+        onError: (error) => {
+          toast.error(error.message);
+        },
+      }
+    );
   });
 
   const partialFormValidation = (

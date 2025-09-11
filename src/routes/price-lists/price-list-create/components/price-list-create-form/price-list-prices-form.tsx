@@ -74,6 +74,7 @@ export const PriceListPricesForm = ({
   if (isError) {
     throw error;
   }
+  console.log("products1", products);
 
   return (
     <div className="flex size-full flex-col divide-y overflow-hidden">
